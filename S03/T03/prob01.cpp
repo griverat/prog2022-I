@@ -1,3 +1,10 @@
+/*
+ * Created on Mon Jul 11 21:49:03 2022
+
+ * @author: Gerardo A. Rivera Tello
+ * @handle: DangoMelon
+ */
+
 #include <iostream>
 
 int main()
