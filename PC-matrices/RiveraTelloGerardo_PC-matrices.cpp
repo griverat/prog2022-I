@@ -57,7 +57,7 @@ int main()
     int origin_index = -1;
     int destination_index = -1;
 
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < ncities; i++)
     {
         if (cities[i] == origin)
         {
@@ -111,10 +111,10 @@ void find_path(int origin_index, int destination_index, char cities[], std::vect
     // para encontrar el camino entre las ciudades
 
     // Necesito un vector para marcar las ciudades que ya visite
-    bool visited[5] = {false, false, false, false, false};
+    bool visited[routes.size()] = {false};
 
     // Necesito un vector para guardar el camino que voy recorriendo
-    int stack[5];
+    int stack[routes.size()];
 
     // Necesito un contador que me diga en que posicion del vector stack estoy
     // y que me permita saber si el vector esta vacio
@@ -157,7 +157,7 @@ void find_path(int origin_index, int destination_index, char cities[], std::vect
         else
         {
             bool found = false;
-            for (int i = 0; i < 5 && !found; i++)
+            for (int i = 0; i < routes.size() && !found; i++)
             {
                 // Si la ciudad adyacente no ha sido visitada y existe una ruta entre
                 // la ciudad que esta en la cima del vector stack y la ciudad adyacente
