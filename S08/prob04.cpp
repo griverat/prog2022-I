@@ -32,13 +32,12 @@ int main()
 
     bool found = false;
 
-    while (low <= high)
+    while (low <= high && !found )
     {
         mid = (low + high) / 2;
         if (vector[mid] == num)
         {
             found = true;
-            break;
         }
         else if (vector[mid] < num)
         {
